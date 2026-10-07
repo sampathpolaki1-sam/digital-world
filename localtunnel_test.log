@@ -1,0 +1,1 @@
+{"result":"1010","explanation":"Conversion from Base 10 to Base 2:\n\nStep 1: Convert 10 (Base 10) to Base 2\nRepeated division by 2 until quotient is 0.\nThe remainders read bottom-to-top give: 1010 (Base 2)\n"}

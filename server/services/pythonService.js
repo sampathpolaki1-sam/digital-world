@@ -1,39 +1,34 @@
-const { spawn } = require('child_process');
-const path = require('path');
+const mathEngine = require('./mathEngine');
 
+// We intercept the python calls and use pure Node.js math to ensure 100% Vercel compatibility
 function runPythonScript(scriptName, inputData) {
     return new Promise((resolve, reject) => {
-        const scriptPath = path.join(__dirname, '..', '..', 'python_engine', scriptName);
-        
-        const pythonExecutable = process.platform === 'win32' ? 'python' : 'python3';
-        const python = spawn(pythonExecutable, [scriptPath, JSON.stringify(inputData)]);
-        
-        let output = '';
-        let errorOutput = '';
-
-        python.stdout.on('data', (data) => {
-            output += data.toString();
-        });
-
-        python.stderr.on('data', (data) => {
-            errorOutput += data.toString();
-        });
-
-        python.on('close', (code) => {
-            if (code !== 0) {
-                return reject(new Error(errorOutput || `Python process exited with code ${code}`));
+        try {
+            let result;
+            if (scriptName === 'number_systems.py') {
+                result = mathEngine.numberSystem(inputData);
+            } else if (scriptName === 'boolean_logic.py') {
+                result = mathEngine.booleanLogic(inputData);
+            } else if (scriptName === 'matrices.py') {
+                result = mathEngine.matrices(inputData);
+            } else if (scriptName === 'crypto.py') {
+                result = mathEngine.crypto(inputData);
+            } else if (scriptName === 'error_correction.py') {
+                result = mathEngine.errorCorrection(inputData);
+            } else if (scriptName === 'data_science.py') {
+                result = mathEngine.dataScience(inputData);
+            } else {
+                result = mathEngine.graph(inputData); // fallback for graph/others
             }
-            try {
-                const result = JSON.parse(output.trim());
-                if (result.error) {
-                    reject(new Error(result.error));
-                } else {
-                    resolve(result);
-                }
-            } catch (e) {
-                reject(new Error('Failed to parse Python output'));
+            
+            if (result.error) {
+                reject(new Error(result.error));
+            } else {
+                resolve(result);
             }
-        });
+        } catch (e) {
+            reject(new Error('Math engine execution failed: ' + e.message));
+        }
     });
 }
 
