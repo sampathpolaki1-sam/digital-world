@@ -61,7 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // UI Helper Functions
+function resetFormButton(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    const btn = section.querySelector('form button[type="submit"]');
+    if (btn && btn.dataset.originalText) {
+        btn.innerText = btn.dataset.originalText;
+        btn.disabled = false;
+        btn.style.opacity = '1';
+    }
+}
+
 function showResult(sectionId, htmlContent) {
+    resetFormButton(sectionId);
     const resultDiv = document.getElementById(`${sectionId}-result`);
     const errorDiv = document.getElementById(`${sectionId}-error`);
     
@@ -87,6 +99,7 @@ function showResult(sectionId, htmlContent) {
 }
 
 function showError(sectionId, message) {
+    resetFormButton(sectionId);
     const resultDiv = document.getElementById(`${sectionId}-result`);
     const errorDiv = document.getElementById(`${sectionId}-error`);
     
@@ -94,3 +107,16 @@ function showError(sectionId, message) {
     errorDiv.classList.remove('hidden');
     resultDiv.classList.add('hidden');
 }
+
+// Global Form Loading State
+document.addEventListener('submit', (e) => {
+    if (e.target.tagName === 'FORM') {
+        const btn = e.target.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.dataset.originalText = btn.innerText;
+            btn.innerText = 'Calculating...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+        }
+    }
+});
