@@ -5,8 +5,8 @@ function runPythonScript(scriptName, inputData) {
     return new Promise((resolve, reject) => {
         const scriptPath = path.join(__dirname, '..', '..', 'python_engine', scriptName);
         
-        // Pass data as JSON string argument
-        const python = spawn('python', [scriptPath, JSON.stringify(inputData)]);
+        const pythonExecutable = process.platform === 'win32' ? 'python' : 'python3';
+        const python = spawn(pythonExecutable, [scriptPath, JSON.stringify(inputData)]);
         
         let output = '';
         let errorOutput = '';
