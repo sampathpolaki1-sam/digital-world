@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital World - Mathematical Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    
+    <header class="top-bar">
+        <div class="logo-container">
+            <h1 class="sys-title">DIGITAL WORLD</h1>
+            <span class="sys-subtitle">Mathematical Analysis of Digital Data</span>
+        </div>
+        <div class="system-status">
+            <span class="status-indicator online"></span>
+            <span class="status-text">SYSTEM ONLINE</span>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <nav class="side-panel">
+            <ul class="nav-menu">
+                <li><a href="#" data-target="home" class="active">Home</a></li>
+                <li><a href="#" data-target="number-systems">Number Systems</a></li>
+                <li><a href="#" data-target="boolean">Boolean Logic</a></li>
+                <li><a href="#" data-target="matrices">Matrices</a></li>
+                <li><a href="#" data-target="graph">Graph Theory</a></li>
+                <li><a href="#" data-target="profiler">Footprint Profiler</a></li>
+                <li><a href="#" data-target="bayesian">Threat Engine (Bayes)</a></li>
+                <li><a href="#" data-target="distributions">Traffic Simulator</a></li>
+                <li><a href="#" data-target="ab-testing">A/B Testing Lab</a></li>
+                <li><a href="#" data-target="regression">Revenue Predictor</a></li>
+                <li><a href="#" data-target="monte-carlo">Monte Carlo Sim</a></li>
+                <li><a href="#" data-target="crypto">Cryptography</a></li>
+                <li><a href="#" data-target="error-lab">Error Correction</a></li>
+                <li style="margin-top: 15px; text-transform: uppercase; font-size: 0.8rem; color: #6272a4; letter-spacing: 2px;">Visual Labs</li>
+                <li><a href="#" data-target="rsa-sim" style="color: #ffb86c;">RSA Cyber Simulator</a></li>
+                <li><a href="#" data-target="fractals" style="color: #ff79c6;">Fractals (Chaos)</a></li>
+                <li><a href="#" data-target="automata" style="color: #ff79c6;">Cellular Automata</a></li>
+                <li style="margin-top: 15px; text-transform: uppercase; font-size: 0.8rem; color: #6272a4; letter-spacing: 2px;">System Logs</li>
+                <li><a href="#" data-target="history">Calculation History</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-panel">
+            <!-- Home Section -->
+            <section id="home" class="view active-view">
+                <div class="panel-header">
+                    <h2>SYSTEM INITIALIZED</h2>
+                    <p class="tagline">Select a mathematical module from the menu to begin.</p>
+                </div>
+                <div class="cards-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="card" onclick="document.querySelector('[data-target=number-systems]').click()">
+                        <h3 style="color: var(--neon-blue); font-family: var(--font-heading);">Number Systems</h3>
+                        <p>Binary, Decimal, Hexadecimal conversions.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=boolean]').click()">
+                        <h3 style="color: var(--neon-green); font-family: var(--font-heading);">Boolean Logic</h3>
+                        <p>AND, OR, NOT, XOR truth tables.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=matrices]').click()">
+                        <h3 style="color: #ffb86c; font-family: var(--font-heading);">Matrices</h3>
+                        <p>Addition, Subtraction, Transpose, Multiplication.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=graph]').click()">
+                        <h3 style="color: var(--neon-red); font-family: var(--font-heading);">Graph Theory</h3>
+                        <p>Nodes, edges, shortest paths (BFS/Dijkstra).</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=crypto]').click()">
+                        <h3 style="color: #bd93f9; font-family: var(--font-heading);">Cryptography</h3>
+                        <p>Modular Arithmetic, Caesar Ciphers & RSA keys.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=error-lab]').click()">
+                        <h3 style="color: #f1fa8c; font-family: var(--font-heading);">Error Correction</h3>
+                        <p>Data transmission parity & Hamming distances.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=profiler]').click()">
+                        <h3 style="color: #50fa7b; font-family: var(--font-heading);">Footprint Profiler</h3>
+                        <p>Descriptive stats & outlier detection.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=bayesian]').click()">
+                        <h3 style="color: #ff5555; font-family: var(--font-heading);">Threat Engine (Bayes)</h3>
+                        <p>Conditional probability & Bayes' Theorem.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=distributions]').click()">
+                        <h3 style="color: #8be9fd; font-family: var(--font-heading);">Traffic Simulator</h3>
+                        <p>Poisson & Exponential distributions.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=ab-testing]').click()">
+                        <h3 style="color: #f1fa8c; font-family: var(--font-heading);">A/B Testing Lab</h3>
+                        <p>Z-Tests, Hypothesis Testing & p-values.</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=regression]').click()">
+                        <h3 style="color: #ffb86c; font-family: var(--font-heading);">Revenue Predictor</h3>
+                        <p>Linear Regression diagnostics & R².</p>
+                    </div>
+                    <div class="card" onclick="document.querySelector('[data-target=monte-carlo]').click()">
+                        <h3 style="color: #bd93f9; font-family: var(--font-heading);">Monte Carlo Sim</h3>
+                        <p>Law of Large Numbers simulations.</p>
+                    </div>
+                    <div class="card" style="border-color:#ffb86c" onclick="document.querySelector('[data-target=rsa-sim]').click()">
+                        <h3 style="color: #ffb86c; font-family: var(--font-heading);">RSA Cyber Simulator</h3>
+                        <p>Visual packet interception & encryption.</p>
+                    </div>
+                    <div class="card" style="border-color:#ff79c6" onclick="document.querySelector('[data-target=fractals]').click()">
+                        <h3 style="color: #ff79c6; font-family: var(--font-heading);">Fractals (Chaos)</h3>
+                        <p>Mandelbrot & Julia Set visualizer.</p>
+                    </div>
+                    <div class="card" style="border-color:#ff79c6" onclick="document.querySelector('[data-target=automata]').click()">
+                        <h3 style="color: #ff79c6; font-family: var(--font-heading);">Cellular Automata</h3>
+                        <p>Game of Life & Emergent behavior.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Number Systems -->
+            <section id="number-systems" class="view">
+                <div class="panel-header">
+                    <h2>NUMBER SYSTEMS</h2>
+                    <p class="tagline">Data Representation Mathematics</p>
+                </div>
+                <div class="math-panel">
+                    <h4>Mathematical Principle:</h4>
+                    <p class="formula-display">Positional number in base b: Σ(d_i × b^i)</p>
+                </div>
+                <div class="card">
+                    <form id="num-system-form">
+                        <label>Input Number:</label>
+                        <input type="text" id="num-input" required placeholder="e.g. 1011 or 42 or 2A">
+                        <label>From Base:</label>
+                        <select id="from-base" style="width: 100%; padding: 10px; margin-bottom: 15px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid var(--neon-blue);">
+                            <option value="10">Decimal (10)</option>
+                            <option value="2">Binary (2)</option>
+                            <option value="16">Hexadecimal (16)</option>
+                        </select>
+                        <label>To Base:</label>
+                        <select id="to-base" style="width: 100%; padding: 10px; margin-bottom: 20px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid var(--neon-blue);">
+                            <option value="2">Binary (2)</option>
+                            <option value="10">Decimal (10)</option>
+                            <option value="16">Hexadecimal (16)</option>
+                        </select>
+                        <button type="submit" class="cmd-btn">Convert Data</button>
+                    </form>
+                    <div id="num-system-result" class="terminal-output hidden"></div>
+                    <div id="num-system-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- Boolean Logic -->
+            <section id="boolean" class="view">
+                <div class="panel-header">
+                    <h2>BOOLEAN LOGIC</h2>
+                    <p class="tagline">Digital Circuit Mathematics</p>
+                </div>
+                <div class="card">
+                    <form id="boolean-form">
+                        <label>Operation:</label>
+                        <select id="bool-op" style="width: 100%; padding: 10px; margin-bottom: 15px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid var(--neon-green);">
+                            <option value="AND">AND</option>
+                            <option value="OR">OR</option>
+                            <option value="NOT">NOT</option>
+                            <option value="XOR">XOR</option>
+                            <option value="EXPRESSION">Custom Expression</option>
+                        </select>
+                        <div id="bool-vars-group">
+                            <label>Variables (0 or 1):</label>
+                            <div style="display:flex; gap:10px;">
+                                <input type="number" id="bool-a" min="0" max="1" placeholder="A (0/1)">
+                                <input type="number" id="bool-b" min="0" max="1" placeholder="B (0/1)">
+                            </div>
+                        </div>
+                        <div id="bool-expr-group" class="hidden">
+                            <label>Expression:</label>
+                            <input type="text" id="bool-expr" placeholder="(A AND B) OR NOT C">
+                        </div>
+                        <button type="submit" class="cmd-btn" style="border-color: var(--neon-green); color: var(--neon-green);">Evaluate Logic</button>
+                    </form>
+                    <div id="boolean-result" class="terminal-output hidden"></div>
+                    <div id="boolean-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- Matrices -->
+            <section id="matrices" class="view">
+                <div class="panel-header">
+                    <h2>MATRICES</h2>
+                    <p class="tagline">Structured Numerical Data</p>
+                </div>
+                <div class="card">
+                    <form id="matrix-form">
+                        <label>Operation:</label>
+                        <select id="matrix-op" style="width: 100%; padding: 10px; margin-bottom: 15px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid #ffb86c;">
+                            <option value="add">Addition (A + B)</option>
+                            <option value="subtract">Subtraction (A - B)</option>
+                            <option value="multiply">Multiplication (A * B)</option>
+                            <option value="transpose">Transpose (A^T)</option>
+                        </select>
+                        <label>Matrix A (JSON format):</label>
+                        <input type="text" id="matrix-a" required value="[[1,2],[3,4]]">
+                        <div id="matrix-b-container">
+                            <label>Matrix B (JSON format):</label>
+                            <input type="text" id="matrix-b" value="[[5,6],[7,8]]">
+                        </div>
+                        <button type="submit" class="cmd-btn" style="border-color: #ffb86c; color: #ffb86c;">Calculate Matrix</button>
+                    </form>
+                    <div id="matrix-result" class="terminal-output hidden"></div>
+                    <div id="matrix-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- Graph Theory -->
+            <section id="graph" class="view">
+                <div class="panel-header">
+                    <h2>ADVANCED NETWORK ROUTING</h2>
+                    <p class="tagline">Dijkstra's Algorithm & Weighted Networks</p>
+                </div>
+                <div class="math-panel">
+                    <h4>Mathematical Principle (Dijkstra's):</h4>
+                    <p class="formula-display">d(v) = min(d(v), d(u) + weight(u, v))</p>
+                </div>
+                <div class="card">
+                    <form id="graph-form">
+                        <label>Network Connections (Format: NodeA-NodeB:Weight, comma separated):</label>
+                        <input type="text" id="graph-edges" required placeholder="A-B:5, A-C:2, C-B:1, B-D:4, C-D:8">
+                        <label>Optimal Path Query (Source & Target):</label>
+                        <div style="display:flex; gap: 10px;">
+                            <input type="text" id="graph-start" required placeholder="Source (e.g. A)">
+                            <input type="text" id="graph-end" required placeholder="Destination (e.g. D)">
+                        </div>
+                        <button type="submit" class="cmd-btn" style="border-color: var(--neon-red); color: var(--neon-red);">Calculate Optimal Route</button>
+                    </form>
+                    <div id="graph-result" class="terminal-output hidden"></div>
+                    <div id="graph-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 1. Descriptive Statistics -->
+            <section id="profiler" class="view">
+                <div class="panel-header">
+                    <h2>DIGITAL FOOTPRINT PROFILER</h2>
+                    <p class="tagline">Descriptive Statistics & Outlier Detection</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #50fa7b;">
+                    <h4 style="color: #50fa7b;">Mathematical Focus:</h4>
+                    <p class="formula-display">Variance (σ²), Skewness, Kurtosis, Interquartile Range (IQR)</p>
+                </div>
+                <div class="card">
+                    <form id="profiler-form">
+                        <label>User Session Times (seconds, comma separated):</label>
+                        <input type="text" id="profiler-data" required placeholder="120, 150, 180, 210, 600, 130">
+                        <button type="submit" class="cmd-btn" style="border-color: #50fa7b; color: #50fa7b; margin-top: 15px;">Analyze Profiler Data</button>
+                    </form>
+                    <div id="profiler-result" class="terminal-output hidden"></div>
+                    <div id="profiler-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 2. Fundamentals of Probability -->
+            <section id="bayesian" class="view">
+                <div class="panel-header">
+                    <h2>CYBER THREAT BAYESIAN ENGINE</h2>
+                    <p class="tagline">Conditional Probability & Bayes' Theorem</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #ff5555;">
+                    <h4 style="color: #ff5555;">Bayes' Theorem:</h4>
+                    <p class="formula-display">P(Fraud | Alert) = [P(Alert | Fraud) * P(Fraud)] / P(Alert)</p>
+                </div>
+                <div class="card">
+                    <form id="bayesian-form">
+                        <label>Prior Probability of Fraud P(Fraud):</label>
+                        <input type="number" step="0.01" min="0" max="1" id="prob-prior" required placeholder="0.05">
+                        <label>True Positive Rate P(Alert | Fraud):</label>
+                        <input type="number" step="0.01" min="0" max="1" id="prob-tpr" required placeholder="0.90">
+                        <label>False Positive Rate P(Alert | Not Fraud):</label>
+                        <input type="number" step="0.01" min="0" max="1" id="prob-fpr" required placeholder="0.10">
+                        <button type="submit" class="cmd-btn" style="border-color: #ff5555; color: #ff5555; margin-top: 15px;">Calculate Posterior Probability</button>
+                    </form>
+                    <div id="bayesian-result" class="terminal-output hidden"></div>
+                    <div id="bayesian-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 3. Random Variables -->
+            <section id="distributions" class="view">
+                <div class="panel-header">
+                    <h2>GLOBAL TRAFFIC SIMULATOR</h2>
+                    <p class="tagline">Poisson & Exponential Distributions</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #8be9fd;">
+                    <h4 style="color: #8be9fd;">Poisson Distribution:</h4>
+                    <p class="formula-display">P(k events) = (λ^k * e^-λ) / k!</p>
+                </div>
+                <div class="card">
+                    <form id="dist-form">
+                        <label>Average Requests Per Minute (λ):</label>
+                        <input type="number" id="dist-lambda" required placeholder="5">
+                        <label>Target Requests (k) to calculate Probability:</label>
+                        <input type="number" id="dist-k" required placeholder="7">
+                        <button type="submit" class="cmd-btn" style="border-color: #8be9fd; color: #8be9fd; margin-top: 15px;">Simulate Traffic</button>
+                    </form>
+                    <div id="dist-result" class="terminal-output hidden"></div>
+                    <div id="dist-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 4. Inferential Statistics -->
+            <section id="ab-testing" class="view">
+                <div class="panel-header">
+                    <h2>DIGITAL UX A/B TESTING LAB</h2>
+                    <p class="tagline">Hypothesis Testing & p-values</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #f1fa8c;">
+                    <h4 style="color: #f1fa8c;">Two-Sample Z-Test:</h4>
+                    <p class="formula-display">Z = (x̄₁ - x̄₂) / √((σ₁²/n₁) + (σ₂²/n₂))</p>
+                </div>
+                <div class="card">
+                    <form id="ab-form">
+                        <label>Group A Conversion Rates (comma separated):</label>
+                        <input type="text" id="ab-group-a" required placeholder="0.1, 0.12, 0.09, 0.11">
+                        <label>Group B Conversion Rates (comma separated):</label>
+                        <input type="text" id="ab-group-b" required placeholder="0.15, 0.14, 0.16, 0.18">
+                        <button type="submit" class="cmd-btn" style="border-color: #f1fa8c; color: #f1fa8c; margin-top: 15px;">Run A/B Test</button>
+                    </form>
+                    <div id="ab-result" class="terminal-output hidden"></div>
+                    <div id="ab-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 5. Regression -->
+            <section id="regression" class="view">
+                <div class="panel-header">
+                    <h2>REVENUE PREDICTOR</h2>
+                    <p class="tagline">Linear Regression Diagnostics</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #ffb86c;">
+                    <h4 style="color: #ffb86c;">Ordinary Least Squares (OLS):</h4>
+                    <p class="formula-display">y = β₀ + β₁x  |  R² (Coefficient of Determination)</p>
+                </div>
+                <div class="card">
+                    <form id="regression-form">
+                        <label>Session Durations X (minutes):</label>
+                        <input type="text" id="reg-x" required placeholder="5, 10, 15, 20, 25">
+                        <label>Revenue Y ($):</label>
+                        <input type="text" id="reg-y" required placeholder="1, 2, 4, 3, 5">
+                        <label>Predict Revenue for new duration (X):</label>
+                        <input type="number" id="reg-predict" placeholder="30">
+                        <button type="submit" class="cmd-btn" style="border-color: #ffb86c; color: #ffb86c; margin-top: 15px;">Build Regression Model</button>
+                    </form>
+                    <div id="reg-result" class="terminal-output hidden"></div>
+                    <div id="reg-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- 6. Theoretical Concepts -->
+            <section id="monte-carlo" class="view">
+                <div class="panel-header">
+                    <h2>NETWORK MONTE CARLO SIMULATOR</h2>
+                    <p class="tagline">Law of Large Numbers (LLN)</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #bd93f9;">
+                    <h4 style="color: #bd93f9;">Law of Large Numbers:</h4>
+                    <p class="formula-display">As N → ∞, sample mean (x̄) → expected value (μ)</p>
+                </div>
+                <div class="card">
+                    <form id="monte-form">
+                        <label>Number of Simulations (N):</label>
+                        <input type="number" id="monte-n" required placeholder="10000" min="100" max="100000">
+                        <label>Probability of Network Failure (p):</label>
+                        <input type="number" step="0.01" min="0" max="1" id="monte-p" required placeholder="0.02">
+                        <button type="submit" class="cmd-btn" style="border-color: #bd93f9; color: #bd93f9; margin-top: 15px;">Run Monte Carlo Simulation</button>
+                    </form>
+                    <div id="monte-result" class="terminal-output hidden"></div>
+                    <div id="monte-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- Crypto Lab -->
+            <section id="crypto" class="view">
+                <div class="panel-header">
+                    <h2>MATHEMATICAL CRYPTO LAB</h2>
+                    <p class="tagline">Modular Arithmetic & Encryption</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #bd93f9;">
+                    <h4 style="color: #bd93f9;">Mathematical Principle (Caesar Cipher):</h4>
+                    <p class="formula-display">E(x) = (x + k) mod 26</p>
+                </div>
+                <div class="card">
+                    <form id="crypto-form">
+                        <label>Message to Encrypt (Letters only):</label>
+                        <input type="text" id="crypto-msg" required placeholder="HELLO">
+                        <label>Shift Key (k):</label>
+                        <input type="number" id="crypto-key" required placeholder="3">
+                        <button type="submit" class="cmd-btn" style="border-color: #bd93f9; color: #bd93f9; margin-top: 15px;">Encrypt Message</button>
+                    </form>
+                    <div id="crypto-result" class="terminal-output hidden"></div>
+                    <div id="crypto-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- Error Lab -->
+            <section id="error-lab" class="view">
+                <div class="panel-header">
+                    <h2>ERROR CORRECTION LAB</h2>
+                    <p class="tagline">Data Integrity & Parity Mathematics</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #f1fa8c;">
+                    <h4 style="color: #f1fa8c;">Mathematical Principle (Even Parity):</h4>
+                    <p class="formula-display">P = b₀ ⊕ b₁ ⊕ ... ⊕ bₙ (XOR sum must equal 0)</p>
+                </div>
+                <div class="card">
+                    <form id="error-form">
+                        <label>Transmit Binary Data (e.g. 1011001):</label>
+                        <input type="text" id="error-data" required placeholder="1011001">
+                        <label>Inject Error at Bit Index (optional):</label>
+                        <input type="number" id="error-index" placeholder="3">
+                        <button type="submit" class="cmd-btn" style="border-color: #f1fa8c; color: #f1fa8c; margin-top: 15px;">Transmit & Check</button>
+                    </form>
+                    <div id="error-result" class="terminal-output hidden"></div>
+                    <div id="error-error" class="error-area hidden"></div>
+                </div>
+            </section>
+
+            <!-- RSA Cyber Simulator -->
+            <section id="rsa-sim" class="view">
+                <div class="panel-header">
+                    <h2>RSA CYBERSECURITY SIMULATOR</h2>
+                    <p class="tagline">Asymmetric Encryption & Packet Interception</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #ffb86c;">
+                    <h4 style="color: #ffb86c;">RSA Algorithm Mechanics:</h4>
+                    <p class="formula-display">Public Key (n, e) locks the data. Only Private Key (d) can unlock it.</p>
+                </div>
+                <div class="card">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:#fff;">
+                        <div style="text-align:center; padding:10px; border:1px solid #50fa7b; width:30%; border-radius:5px;">
+                            <h3 style="color:#50fa7b">ALICE</h3>
+                            <p style="font-size:0.8rem; color:#8be9fd">Sender</p>
+                            <input type="text" id="rsa-msg" placeholder="Secret msg" style="width:100%; margin-top:5px; padding:5px; background:#111; color:#fff; border:1px solid #444;">
+                        </div>
+                        <div style="text-align:center; padding:10px; border:1px dashed #ff5555; width:30%; border-radius:5px;">
+                            <h3 style="color:#ff5555">EVE</h3>
+                            <p style="font-size:0.8rem; color:#ffb86c">Hacker / Interceptor</p>
+                        </div>
+                        <div style="text-align:center; padding:10px; border:1px solid #8be9fd; width:30%; border-radius:5px;">
+                            <h3 style="color:#8be9fd">BOB</h3>
+                            <p style="font-size:0.8rem; color:#50fa7b">Receiver (Holds Private Key)</p>
+                        </div>
+                    </div>
+                    <canvas id="rsa-canvas" width="800" height="200" style="width:100%; height:auto; border: 1px solid #ffb86c; box-shadow: 0 0 20px rgba(255, 184, 108, 0.1); background:#0a0a0a;"></canvas>
+                    
+                    <div style="margin-top: 20px; display:flex; gap: 10px; flex-wrap:wrap;">
+                        <button class="cmd-btn" id="btn-rsa-step1" style="border-color: #8be9fd; color: #8be9fd;">1. Bob Sends Public Key</button>
+                        <button class="cmd-btn" id="btn-rsa-step2" style="border-color: #50fa7b; color: #50fa7b;" disabled>2. Alice Sends Encrypted Msg</button>
+                        <button class="cmd-btn" id="btn-rsa-step3" style="border-color: #ffb86c; color: #ffb86c;" disabled>3. Bob Decrypts Msg</button>
+                        <button class="cmd-btn" id="btn-rsa-reset" style="border-color: #ff5555; color: #ff5555;">Reset Simulator</button>
+                    </div>
+
+                    <div id="rsa-log" style="margin-top:20px; padding:15px; background:#111; border:1px solid #333; font-family:var(--font-code); font-size:0.9rem; color:#bbb; height:150px; overflow-y:auto;">
+                        > System Ready. Waiting for Key Exchange...
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fractals -->
+            <section id="fractals" class="view">
+                <div class="panel-header">
+                    <h2>FRACTAL MATHEMATICS (CHAOS THEORY)</h2>
+                    <p class="tagline">The Mandelbrot Set: Zₙ₊₁ = Zₙ² + C</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #ff79c6;">
+                    <h4 style="color: #ff79c6;">Complex Plane Iteration:</h4>
+                    <p class="formula-display">A point 'C' is in the Mandelbrot set if its iteration does not escape to infinity.</p>
+                </div>
+                <div class="card">
+                    <canvas id="fractal-canvas" width="800" height="400" style="width:100%; height:auto; border: 1px solid #ff79c6; box-shadow: 0 0 20px rgba(255, 121, 198, 0.2);"></canvas>
+                    <div style="margin-top: 15px; display:flex; gap: 10px;">
+                        <button class="cmd-btn" id="btn-draw-mandelbrot" style="border-color: #ff79c6; color: #ff79c6;">Generate Mandelbrot</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cellular Automata -->
+            <section id="automata" class="view">
+                <div class="panel-header">
+                    <h2>CELLULAR AUTOMATA</h2>
+                    <p class="tagline">Emergent Complexity from Boolean Rules</p>
+                </div>
+                <div class="math-panel" style="border-left-color: #ff79c6;">
+                    <h4 style="color: #ff79c6;">Conway's Game of Life:</h4>
+                    <p class="formula-display">1. Survival: 2 or 3 neighbors | 2. Death: &lt;2 or &gt;3 neighbors | 3. Birth: exactly 3 neighbors</p>
+                </div>
+                <div class="card">
+                    <canvas id="automata-canvas" width="800" height="400" style="width:100%; height:auto; border: 1px solid #ff79c6; box-shadow: 0 0 20px rgba(255, 121, 198, 0.2);"></canvas>
+                    <div style="margin-top: 15px; display:flex; gap: 10px;">
+                        <button class="cmd-btn" id="btn-start-automata" style="border-color: #50fa7b; color: #50fa7b;">Start / Pause Simulation</button>
+                        <button class="cmd-btn" id="btn-random-automata" style="border-color: #ffb86c; color: #ffb86c;">Randomize Seed</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History -->
+            <section id="history" class="view">
+                <div class="panel-header">
+                    <h2>CALCULATION HISTORY</h2>
+                    <p class="tagline">Database Audit Log</p>
+                </div>
+                <button id="refresh-history" class="cmd-btn" style="margin-bottom: 20px;">Refresh Log</button>
+                <div id="history-container" style="color: var(--text-dim); font-family: var(--font-code);">
+                    <p>> Loading history from NeonDB...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/visual.js"></script>
+</body>
+</html>
